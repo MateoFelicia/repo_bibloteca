@@ -26,18 +26,9 @@ export default function Inicio() {
           </li>
         </ul>
       </nav>
-      
-      <h2>Todos los libros</h2>
-      <ul>
-        {librosIniciales.map((libro) => (
-          <li key={libro.id}>
-            {libro.titulo} — <em>{libro.categoria}</em>
-          </li>
-        ))}
-      </ul>
 
-      {/* Pasamos los libros al Outlet */}
-      <Outlet context={{ libros: librosIniciales }} />
+      <Outlet context={{ libros: librosIniciales }}  />
+      {/* Literalmente el outlet es el bolsillo de inicio donde guarda información para que sus hijos */}
     </>
   )
 }
